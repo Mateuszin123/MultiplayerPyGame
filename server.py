@@ -7,7 +7,6 @@ class Server:
     def __init__(self):
         self.host = "localhost"
         self.port = 1234
-        self.a = 0
         self.clients = []
 
 
@@ -74,11 +73,11 @@ class Server:
         print(f"{addr} desconectado!")
     
     def sendRequest(self, message, connection):
-        # try:
+        try:
             connection.send(message)
-        # except:
-            # connection.close()
-            # self.clients.remove(connection)
+        except:
+            connection.close()
+            self.clients.remove(connection)
 
     def UpdatePlayers(self):
         self.genFrutas()
