@@ -1,0 +1,13 @@
+{
+    "tela-configs":{
+        "caption":"Brabao Game",
+        "size":[600, 200]
+    },
+    "server-configs":{
+        "ip":"localhost",
+        "port":1234,
+        
+        "velocity-players":16,
+        "scale-players":16
+    }
+}
